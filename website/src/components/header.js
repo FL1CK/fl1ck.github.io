@@ -7,6 +7,8 @@ const Header = ({ siteTitle }) => (
     style={{
       background: `rebeccapurple`,
       marginBottom: `1.45rem`,
+      display: "grid",
+      gridTemplateColumns: "1fr 2fr",
     }}
   >
     <div
@@ -14,6 +16,7 @@ const Header = ({ siteTitle }) => (
         margin: `0 auto`,
         maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
+        display: "flex",
       }}
     >
       <h1 style={{ margin: 0 }}>
@@ -27,6 +30,72 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+    </div>
+
+    <div style={{
+      margin: "auto 0 auto auto",
+      display: "flex",
+      width: "100%",
+      maxWidth: "500px",
+      float: "right",
+    }}>
+      <div
+      style={{
+        flex: 1,
+      }}>
+        <h4 style={{
+          margin: 0,
+        }}>
+          <Link
+            to="/page-2/"
+            style={{
+              color: "white",
+              textDecoration: "none",
+              textAlign: "right",
+            }}>
+            Me
+          </Link>
+        </h4>
+        
+      </div>
+
+      <div
+        style={{
+          flex: 1,
+        }}>
+          <h4 style={{
+            margin: 0,
+          }}>
+            <Link
+              to="/page-2/"
+              style={{
+                color: "white",
+                textDecoration: "none",
+                textAlign: "right",
+              }}>
+              Portfolio
+            </Link>
+          </h4>
+      </div>
+
+      <div
+        style={{
+          flex: 1,
+        }}>
+          <h4 style={{
+            margin: 0,
+          }}>
+            <Link
+              to="/page-2/"
+              style={{
+                color: "white",
+                textDecoration: "none",
+                textAlign: "right",
+              }}>
+              Fun
+            </Link>
+          </h4>
+      </div>
     </div>
   </header>
 )
